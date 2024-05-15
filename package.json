@@ -6,6 +6,7 @@
   "scripts": {
     "build": "echo ${secrets.DB_URL}" 
   },
+  "environment":sadas,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/naveennv2k/Banking-system.git"
