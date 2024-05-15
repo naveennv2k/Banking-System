@@ -1,0 +1,25 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "Description of your project",
+  "main": "index.js",
+  "scripts": {
+    "build": "your-build-command-here", // Replace with your actual build command
+    "test": "your-test-command-here" // Replace with your actual test command
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveennv2k/Banking-system.git"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naveennv2k/Banking-system/issues"
+  },
+  "homepage": "https://github.com/ynaveennv2k/Banking-system#readme",
+  "devDependencies": {
+    // Include any development dependencies needed for building and testing
+    // For example, testing frameworks, build tools, etc.
+  }
+}
