@@ -26,5 +26,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo ${{ secrets.secrets.DB_URL }}
+          echo ${{ secrets.PRIVATE_KEY }}
           
