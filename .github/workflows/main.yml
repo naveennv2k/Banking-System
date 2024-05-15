@@ -26,5 +26,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo ${{ secrets.secrets.DB_URL }} > api_key.txt
-          # Your deployment commands using the secre
+          echo ${{ secrets.secrets.DB_URL }}
+          
