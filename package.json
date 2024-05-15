@@ -4,8 +4,7 @@
   "description": "Description of your project",
   "main": "index.js",
   "scripts": {
-    "build": "your-build-command-here", // Replace with your actual build command
-    "test": "your-test-command-here" // Replace with your actual test command
+    "build": "echo workflow" 
   },
   "repository": {
     "type": "git",
