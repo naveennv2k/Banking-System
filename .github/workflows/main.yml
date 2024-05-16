@@ -9,6 +9,8 @@ env:
 
 jobs:
   build:
+    environment: Sample
+
     runs-on: ubuntu-latest
 
     steps:
@@ -28,5 +30,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo "${{vars.TEST}}"
+          echo "${{TEST}}"
           
