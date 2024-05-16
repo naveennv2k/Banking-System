@@ -28,5 +28,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo $sample
+          echo "${{Sample.TEST}}"
           
