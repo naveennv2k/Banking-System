@@ -28,5 +28,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo "${{secrets.DOPPLER_CONFIG}}"
+          echo "${{variables.VAR}}"
           
