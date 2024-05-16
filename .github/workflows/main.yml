@@ -1,9 +1,11 @@
-name: CI/CD Pipeline
+nname: CI/CD Pipeline
 
 on:
   push:
     branches:
       - main
+env:
+  sample: Hello client
 
 jobs:
   build:
@@ -26,5 +28,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo ${{ vars.TEST}}
+          echo $sample
           
