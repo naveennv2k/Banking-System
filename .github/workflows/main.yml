@@ -26,5 +26,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo ${{ secrets.PRIVATE_KEY }}
+          echo ${{ Sample.TEST }}
           
