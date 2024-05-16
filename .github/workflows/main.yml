@@ -28,5 +28,5 @@ jobs:
 
       - name: Deploy
         run: |
-          echo "${{Sample.TEST}}"
+          echo "${{sadas.DOPPLER_CONFIG}"
           
