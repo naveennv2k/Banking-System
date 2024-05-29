@@ -7,21 +7,21 @@ env:
 
 jobs:
   checkout:
-    uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    with:
-      secret-one: '{"value": "your_value_to_pass"}'
+    runs-on: ubuntu-latest
+    outputs:
+      secret-one: ${{ steps.checkout.outputs.secret-one }}
+    steps:
+      - name: Checkout code
+        uses: naveennv2k/suduko/.github/workflows/main.yml@main
+        with:
+          secret-one: "hello world"
 
   build:
+    needs: checkout
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Inject Secret
-        run: |
-          echo "SECRET_ONE=secret_value_one" >> $GITHUB_ENV
-          echo "SECRET_TWO=secret_value_two" >> $GITHUB_ENV
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -37,4 +37,3 @@ jobs:
       - name: Deploy
         run: |
           echo "Deploying..."
-          # Add your deployment commands here
