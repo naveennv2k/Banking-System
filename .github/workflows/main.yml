@@ -9,7 +9,7 @@ jobs:
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
-      SECRET_ONE: "hello world"
+      secret-one: "hello world"
 
   build:
     runs-on: ubuntu-latest
