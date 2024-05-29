@@ -7,6 +7,7 @@ env:
 jobs:
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
+    
   build:
     environment: Sample
 
@@ -15,7 +16,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: inject Secret
+        run:  echo "SECRET_ONE=secret_value_one" >> $GITHUB_ENV
+              echo "SECRET_TWO=secret_value_two" >> $GITHUB_ENV
+  
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
