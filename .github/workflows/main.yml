@@ -6,7 +6,7 @@ env:
 
 jobs:
   checkout:
-    uses: naveennv2k/suduko/.github/workflows/main@main
+    uses: naveennv2k/suduko/.github/workflows/main.yml@main
   build:
     environment: Sample
 
