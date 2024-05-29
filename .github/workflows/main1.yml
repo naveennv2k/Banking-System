@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Download secrets artifact
-      uses: actions/download-artifact@v2
+      uses: actio/download-artifact@v2
       with:
         name: exported-secrets
         path: secrets
