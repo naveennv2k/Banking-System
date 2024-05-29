@@ -1,10 +1,6 @@
 name: Import Secrets
 
-on:
-  workflow_run:
-    workflows: ["Export Secrets"]
-    types:
-      - completed
+on: push
 
 jobs:
   import-secrets:
