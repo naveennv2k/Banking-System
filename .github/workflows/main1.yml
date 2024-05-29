@@ -1,0 +1,29 @@
+name: Import Secrets
+
+on:
+  workflow_run:
+    workflows: ["Export Secrets"]
+    types:
+      - completed
+
+jobs:
+  import-secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download secrets artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: exported-secrets
+        path: secrets
+    
+    - name: Set up secrets
+      run: |
+        echo "Importing secrets..."
+        source secrets/ENV
+
+    # Your subsequent steps can use the imported secrets
+    - name: Example Step
+      run: |
+        echo "Using secret ONE: $SECRET_ONE"
+        echo "Using secret TWO: $SECRET_TWO"
