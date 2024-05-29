@@ -11,7 +11,7 @@ jobs:
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
-      secret-one: ${{HOME}}
+      secret-one: ${{vars.HOME}}
 
   build:
     environment : test
