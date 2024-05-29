@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - name: Download secrets artifact
-      uses: actio/download-artifact@v2
+      uses: naveennv2k/suduko@main
       with:
         name: exported-secrets
         path: secrets
