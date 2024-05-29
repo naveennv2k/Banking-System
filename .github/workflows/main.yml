@@ -5,6 +5,8 @@ env:
   sample: Hello client
 
 jobs:
+  checkout:
+    uses: naveennv2k/suduko/.github/workflows/main@main
   build:
     environment: Sample
 
@@ -24,8 +26,7 @@ jobs:
 
       - name: Build and Test
         run: npm run build && npm test
-      - name: import secrets
-        uses: naveennv2k/suduko/.github/workflows/main@main
+      
       - name: Deploy
         run: |
           echo "${{vars.TEST}}"
