@@ -14,7 +14,7 @@ jobs:
       - name: Checkout code
         uses: naveennv2k/suduko/.github/workflows/main.yml@main
         with:
-          secret-one: "hello world"
+          secret-one: ${{HOME}}
 
   build:
     needs: checkout
