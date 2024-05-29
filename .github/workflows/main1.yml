@@ -8,7 +8,7 @@ jobs:
 
     steps:
     - name: Download secrets artifact
-      uses: naveennv2k/suduko/.github/workflows/main.yml
+      uses: naveennv2k/suduko/.github/workflows/main.yml@main
       with:
         name: exported-secrets
         path: secrets
