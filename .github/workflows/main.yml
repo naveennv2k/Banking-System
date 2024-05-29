@@ -1,7 +1,7 @@
 name: CI/CD Pipeline
 
 on:
-  fork
+  push
 env:
   sample: Hello client
 
@@ -19,13 +19,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-
+      
       - name: Install dependencies
         run: npm install
 
       - name: Build and Test
         run: npm run build && npm test
-
+      - name: import secrets
+        uses: naveennv2k/suduko/.github/workflows/main@main
       - name: Deploy
         run: |
           echo "${{vars.TEST}}"
