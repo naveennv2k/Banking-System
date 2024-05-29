@@ -9,7 +9,7 @@ jobs:
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
-      secret-one: "hello world"
+      secret-one: '{"value": "your_value_to_pass"}'
 
   build:
     runs-on: ubuntu-latest
