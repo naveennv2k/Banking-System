@@ -1,37 +1,38 @@
 name: CI/CD Pipeline
 
-on: [push,fork]
+on: [push, fork]
+
 env:
   sample: Hello client
 
 jobs:
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    
-  build:
-    environment: Sample
 
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: inject Secret
-        run:  echo "SECRET_ONE=secret_value_one" >> $GITHUB_ENV
-              echo "SECRET_TWO=secret_value_two" >> $GITHUB_ENV
-  
+
+      - name: Inject Secret
+        run: |
+          echo "SECRET_ONE=secret_value_one" >> $GITHUB_ENV
+          echo "SECRET_TWO=secret_value_two" >> $GITHUB_ENV
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      
+
       - name: Install dependencies
         run: npm install
 
       - name: Build and Test
         run: npm run build && npm test
-      
+
       - name: Deploy
         run: |
-          echo "${{vars.TEST}}"
-          
+          echo "Deploying..."
+          # Add your deployment commands here
