@@ -23,7 +23,7 @@ jobs:
      - name: sample1
        run: npm install http
      - name: sample2
-       run: echo "${{secrets.REPO}}"
+       run: echo "$HOME"
       
      
       
