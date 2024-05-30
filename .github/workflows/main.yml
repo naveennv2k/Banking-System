@@ -10,15 +10,12 @@ env:
 
 jobs:
   
-  checkout:
-    environment: test
-    runs-on: ubunto-latest
+  test:
+    runs-on: ubuntu-latest
     steps:
-    - name: sample1 
-      uses: naveennv2k/suduko/.github/workflows/main.yml@main
-      with:
-        param1: ${{vars.HOME}}
-    
+     - name: sample1
+       run: echo "hello"
+     
       
      
       
