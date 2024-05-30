@@ -10,12 +10,13 @@ on: [push,fork]
 jobs:
   
   checkout:
-    
-    uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    with:
-      param1: ${{vars.HOME}}
-    secrets: inherit  
-    
+    runs-on: ubunto-latest
+    steps:
+    - uses: naveennv2k/suduko/.github/workflows/main.yml@main
+      with:
+        param1: ${{vars.HOME}}
+      
+      
   build:
     environment : test
     runs-on: ubuntu-latest
