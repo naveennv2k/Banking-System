@@ -20,6 +20,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: sample test 
+        uses: naveennv2k/suduko/.github/workflows/main.yml@main
+        with:
+          param1: ${{vars.HOME}}
       - name: Checkout code
         uses: actions/checkout@v2
 
