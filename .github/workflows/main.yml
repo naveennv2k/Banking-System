@@ -15,7 +15,8 @@ jobs:
     steps:
      - name: sample1
        run: npm install http
-     
+     - name: sample2
+       run: echo "sample2"
       
      
       
