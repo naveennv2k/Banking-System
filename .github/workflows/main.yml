@@ -11,8 +11,10 @@ env:
 jobs:
   inject-secret:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
+  
     with:
-      token: ${{secrets.REPO}} 
+      token: "${{secrets.REPO}}"
+ 
     
   test:
     
