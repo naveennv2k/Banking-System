@@ -11,11 +11,14 @@ env:
 jobs:
   
   checkout:
-   
-    uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    with:
-      param1: $HOME
-    secrets : inherit
+    runs-on: ubunto-latest
+    steps:
+    - name: sample1 
+      uses: naveennv2k/suduko/.github/workflows/main.yml@main
+      with:
+        param1: $HOME
+    
+      
      
       
   build:
