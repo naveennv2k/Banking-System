@@ -3,14 +3,19 @@ name: CI/CD Pipeline
 on: [push,fork]
 
 
-env:
-  environment : test
+
+  
   
 
 jobs:
   
-  
-
+  checkout:
+    
+    uses: naveennv2k/suduko/.github/workflows/main.yml@main
+    with:
+      param1: "hello worlds"
+    secrets: inherit  
+    
   build:
     environment : test
     runs-on: ubuntu-latest
