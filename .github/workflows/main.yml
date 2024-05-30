@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on: [push,fork]
 env: 
-  HOME: hello
+  HOME: ${{secrets.REPO}}
 
 
   
@@ -13,7 +13,7 @@ jobs:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
   
     with:
-      token: "${{secrets.REPO}}"
+      token: "hello"
  
     
   test:
