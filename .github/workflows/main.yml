@@ -14,7 +14,7 @@ jobs:
    
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
-      param1: ${{VAR}}
+      param1: ${{HOME}}
     secrets : inherit
      
       
