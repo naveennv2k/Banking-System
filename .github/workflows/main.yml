@@ -10,7 +10,8 @@ jobs:
   
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
-   
+    with:
+      param1: ${{vars.HOME}}
 
   build:
     environment : test
@@ -22,8 +23,8 @@ jobs:
 
       - name: Inject Secret
         run: |
-          echo "SECRET_ONE=secret_value_one" >> $GITHUB_ENV
-          echo "SECRET_TWO=secret_value_two" >> $GITHUB_ENV
+          echo " ${{vars.HOME}}"
+          
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
