@@ -25,7 +25,7 @@ jobs:
      - name: sample2
        run: echo "$SAMPLE_HOME"
      - name: get secrets
-        run: |
+       run: |
           curl -L \
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: Bearer ${{ secrets.API_KEY }}" \
