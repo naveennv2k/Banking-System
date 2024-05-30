@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: sample1
-       run: echo "hello"
+       run: npm install http
      
       
      
