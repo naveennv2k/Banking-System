@@ -12,7 +12,7 @@ jobs:
   inject-secret:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     secrets: 
-      token: ${{secrets.API_KEY12}}
+      token: ${{secrets.API_KEY}}
     
       
     
