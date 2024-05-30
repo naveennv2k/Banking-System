@@ -12,6 +12,7 @@ jobs:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
       param1: ${{vars.HOME}}
+    secrets: inherit  
 
   build:
     environment : test
