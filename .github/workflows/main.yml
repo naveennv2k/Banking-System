@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on: [push,fork]
 env: 
-  HOME: ${{secrets.REPO}}
+  HOME: ${{varibles.VAR}}
 
 
   
