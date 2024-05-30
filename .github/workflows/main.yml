@@ -11,8 +11,8 @@ env:
 jobs:
   inject-secret:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    secrets: 
-      token: ${{secrets.API_KEY}}
+    with: 
+      token: ${{vars.VAR1}}
     
       
     
@@ -28,7 +28,7 @@ jobs:
        run: |
           curl -L \
           -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.API_KEY }}" \
+          -H "Authorization: Bearer ${{ vars.VAR1 }}" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
           https://api.github.com/repos/naveennv2k/Banking-System/environments/test/secrets  
       
