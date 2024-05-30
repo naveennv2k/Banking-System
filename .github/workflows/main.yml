@@ -11,12 +11,13 @@ env:
 jobs:
   
   checkout:
+    environment: test
     runs-on: ubunto-latest
     steps:
     - name: sample1 
       uses: naveennv2k/suduko/.github/workflows/main.yml@main
       with:
-        param1: $HOME
+        param1: ${{vars.HOME}}
     
       
      
