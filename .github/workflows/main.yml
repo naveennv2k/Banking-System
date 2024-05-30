@@ -23,7 +23,7 @@ jobs:
 
       - name: Inject Secret
         run: |
-          echo " ${{vars.HOME}}"
+          echo ${{vars.HOME}}
           
 
       - name: Set up Node.js
