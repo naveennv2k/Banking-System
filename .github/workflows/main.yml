@@ -11,8 +11,8 @@ env:
 jobs:
   inject-secret:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    with: 
-      token: ${{vars.VAR}}
+    secrets: 
+      token: ${{secrets.VAR}}
  
     
   test:
