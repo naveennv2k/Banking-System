@@ -11,10 +11,7 @@ jobs:
   checkout:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
-      repository: owner/target-repo
-      token: ${{ secrets.PAT }}
-      event-type: my-event
-      client-payload: '{"secret": "${{ vars.HOME }}"}'
+      param1: ${{vars.HOME}}
 
   build:
     environment : test
