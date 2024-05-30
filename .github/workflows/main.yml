@@ -9,11 +9,7 @@ env:
 
 jobs:
   
-  checkout:
-    uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    with:
-      param1: ${{vars.HOME}}
-    secrets: inherit  
+  
 
   build:
     environment : test
@@ -22,6 +18,7 @@ jobs:
     steps:
       - name: sample test 
         uses: naveennv2k/suduko/.github/workflows/main.yml@main
+        id: sampledemo1
         with:
           param1: ${{vars.HOME}}
       - name: Checkout code
