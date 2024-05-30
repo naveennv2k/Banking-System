@@ -13,7 +13,7 @@ jobs:
     
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
     with:
-      param1: "hello worlds"
+      param1: ${{vars.HOME}}
     secrets: inherit  
     
   build:
