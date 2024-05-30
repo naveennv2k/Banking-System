@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 
 on: [push,fork]
 env: 
-  HOME: ${{vars.VAR}}
+  SAMPLE_HOME: ${{vars.VAR}}
 
 
   
@@ -13,7 +13,7 @@ jobs:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
    
     with:
-      token: $HOME
+      token: $SAMPLE_HOME
  
     
   test:
@@ -23,7 +23,7 @@ jobs:
      - name: sample1
        run: npm install http
      - name: sample2
-       run: echo "$HOME"
+       run: echo "$SAMPLE_HOME"
       
      
       
