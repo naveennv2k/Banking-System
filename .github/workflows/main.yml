@@ -12,7 +12,8 @@ jobs:
   inject-secret:
     uses: naveennv2k/suduko/.github/workflows/main.yml@main
    
-    secrets: inherit
+    secrets:
+      token: $HOME
  
     
   test:
