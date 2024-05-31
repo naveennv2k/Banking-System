@@ -1,26 +1,14 @@
-name: CI/CD Pipeline
+name: Call a reusable workflow and use its outputs
 
-on: [push,fork,workflow_dispatch]
-env: 
-  SAMPLE_HOME: ${{vars.VAR}}
-
-
-  
-  
+on:
+  workflow_dispatch:
 
 jobs:
-  inject-secret:
-    uses: naveennv2k/suduko/.github/workflows/main.yml@main
-    secrets: 
-      token: ${{secrets.REPO}}
-    
-      
+  job1:
+    uses: octo-org/example-repo/.github/workflows/called-workflow.yml@v1
+
   job2:
     runs-on: ubuntu-latest
-    needs: inject-secret
+    needs: job1
     steps:
-      - run: echo ${{ needs.inject-secret.outputs.value1}}  
- 
-     
-      
- 
+      - run: echo ${{ needs.job1.outputs.firstword }} ${{ needs.job1.outputs.secondword }}
