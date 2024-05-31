@@ -19,7 +19,7 @@ jobs:
     - name : exec file 
       run :  |
           cd /home/runner/work/Banking-System/Banking-System/.
-          ls
+          la
 
         
       
