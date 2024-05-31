@@ -18,7 +18,7 @@ jobs:
       run: ls
     - name : exec file 
       run :  |
-            echo $GITHUB_WORKSPACE
+            echo /home/runner/work/Banking-System/sample.txt
 
         
       
