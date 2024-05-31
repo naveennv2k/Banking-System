@@ -19,10 +19,7 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run :  |
-         find ~/ -iname "main"
-
-          ls -a
+      run : java ./MyClass.java
 
         
       
