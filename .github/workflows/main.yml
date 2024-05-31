@@ -14,5 +14,7 @@ jobs:
     steps:
     - name : print
       run: java -version
+    - name: list
+      run: ls
     - name : exec file 
       run : java ./MyClass.java
