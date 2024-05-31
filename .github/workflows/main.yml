@@ -17,4 +17,4 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run : java ./MyClass.java
+      run : javac ./MyClass
