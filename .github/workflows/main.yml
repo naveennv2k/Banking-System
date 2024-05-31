@@ -17,4 +17,6 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run : cd /project
+      run :  |
+        cd $GITHUB_WORKSPACE
+        ls -a
