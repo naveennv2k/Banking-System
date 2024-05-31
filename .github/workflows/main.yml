@@ -17,4 +17,4 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run :  java $GITHUB_WORKSPACE/MyClass.java
+      run :  javac $GITHUB_WORKSPACE/MyClass.java
