@@ -18,7 +18,8 @@ jobs:
       run: ls
     - name : exec file 
       run :  |
-          cd /home/runner/work/Banking-System/Banking-System/./../../Banking-System/Banking-System
+         find -iname "sample.txt"
+
           ls -a
 
         
