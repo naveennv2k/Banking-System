@@ -1,6 +1,6 @@
 name: Call a reusable workflow and use its outputs
 
-on: [push,workflow_call]
+on: [workflow_call]
 
 jobs:
   job1:
