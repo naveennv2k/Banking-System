@@ -18,7 +18,7 @@ jobs:
       run: ls
     - name : exec file 
       run :  |
-         find -iname "sample.txt"
+         find -iname "sample"
 
           ls -a
 
