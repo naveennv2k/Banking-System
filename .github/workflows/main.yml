@@ -17,4 +17,4 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run : open naveennv2k/Banking-System/MyClass.java
+      run : open ./MyClass.java
