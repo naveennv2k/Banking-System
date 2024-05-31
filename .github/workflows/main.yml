@@ -18,7 +18,8 @@ jobs:
       run: ls
     - name : exec file 
       run :  |
-            cat /home/runner/work/Banking-System/sample.txt
+          cd /home/runner/work/Banking-System
+          ls
 
         
       
