@@ -17,4 +17,4 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run : open MyClass.java
+      run : cd /project
