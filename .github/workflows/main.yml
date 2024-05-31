@@ -18,6 +18,7 @@ jobs:
       run: ls
     - name : exec file 
       run :  |
-            cat $GITHUB_WORKSPACE/sample.txt
+            echo $GITHUB_WORKSPACE
+
         
       
