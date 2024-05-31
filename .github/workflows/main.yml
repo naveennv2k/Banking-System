@@ -17,4 +17,7 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run :  npm version
+      run :  |
+            cat ./sample.txt
+        
+      
