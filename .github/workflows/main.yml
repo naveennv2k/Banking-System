@@ -14,7 +14,4 @@ jobs:
     steps:
     - name : print
       run: java -version
-    - name: Set up JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
+    
