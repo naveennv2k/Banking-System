@@ -19,7 +19,10 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run : java ./MyClass.java
+      run : |
+            values1=$(java ./MyClass.java)
+            echo $values1
+      
 
         
       
