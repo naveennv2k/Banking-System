@@ -17,6 +17,4 @@ jobs:
     - name: list
       run: ls
     - name : exec file 
-      run :  |
-           cd $GITHUB_WORKSPACE
-           ls
+      run :  echo $GTIHUB_WORKSPACE
