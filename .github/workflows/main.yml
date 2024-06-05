@@ -14,14 +14,8 @@ jobs:
     steps:
     - name : checker 
       uses: actions/checkout@v4.1.5
-    - name : print
-      run: java -version
-    - name: list
-      run: ls
-    - name : exec file 
-      run : |
-            values1=$(java ./MyClass.java)
-            echo $values1
+    - name : print  secrets
+      run: echo "${{secrets.API_KEY}}"  
       
 
         
